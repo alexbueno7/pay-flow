@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:payflow/shared/theme/app_colors.dart';
-import 'package:payflow/shared/theme/app_text_styles.dart';
+import 'package:payflow/shared/themes/app_colors.dart';
+import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
 class BottomSheetWidget extends StatelessWidget {
@@ -43,11 +43,11 @@ class BottomSheetWidget extends StatelessWidget {
                       child: Text.rich(
                         TextSpan(
                           text: title,
-                          style: AppTextStyles.buttonBoldHeading,
+                          style: TextStyles.buttonBoldHeading,
                           children: [
                             TextSpan(
                                 text: "\n$subtitle",
-                                style: AppTextStyles.buttonHeading),
+                                style: TextStyles.buttonHeading),
                           ],
                         ),
                         textAlign: TextAlign.center,

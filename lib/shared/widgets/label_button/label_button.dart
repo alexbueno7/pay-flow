@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:payflow/shared/theme/app_text_styles.dart';
+import 'package:payflow/shared/themes/app_text_styles.dart';
 
 class LabelButton extends StatelessWidget {
   final String label;
@@ -21,7 +21,7 @@ class LabelButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           label,
-          style: style ?? AppTextStyles.buttonHeading,
+          style: style ?? TextStyles.buttonHeading,
         ),
       ),
     );
