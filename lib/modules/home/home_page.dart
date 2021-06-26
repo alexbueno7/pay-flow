@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                     ]),
               ),
               subtitle: Text(
-                "Mantenha suas contas em dia",
+                "Gerencie seus Boletos",
                 style: TextStyles.captionShape,
               ),
               trailing: Container(

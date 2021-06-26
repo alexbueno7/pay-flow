@@ -5,11 +5,13 @@ class BoletoModel {
   final String? dueDate;
   final double? value;
   final String? barcode;
+  final bool? isPaid;
   BoletoModel({
     this.name,
     this.dueDate,
     this.value,
     this.barcode,
+    this.isPaid = false
   });
 
   BoletoModel copyWith({
@@ -17,12 +19,14 @@ class BoletoModel {
     String? dueDate,
     double? value,
     String? barcode,
+    bool? isPaid,
   }) {
     return BoletoModel(
       name: name ?? this.name,
       dueDate: dueDate ?? this.dueDate,
       value: value ?? this.value,
       barcode: barcode ?? this.barcode,
+      isPaid: isPaid ?? this.isPaid
     );
   }
 
@@ -32,6 +36,7 @@ class BoletoModel {
       'dueDate': dueDate,
       'value': value,
       'barcode': barcode,
+      'isPaid' : isPaid
     };
   }
 
@@ -51,7 +56,7 @@ class BoletoModel {
 
   @override
   String toString() {
-    return 'BoletoModel(name: $name, dueDate: $dueDate, value: $value, barcode: $barcode)';
+    return 'BoletoModel(name: $name, dueDate: $dueDate, value: $value, barcode: $barcode, isPaid: $isPaid)';
   }
 
   @override
@@ -62,11 +67,12 @@ class BoletoModel {
         other.name == name &&
         other.dueDate == dueDate &&
         other.value == value &&
+        other.isPaid == isPaid &&
         other.barcode == barcode;
   }
 
   @override
   int get hashCode {
-    return name.hashCode ^ dueDate.hashCode ^ value.hashCode ^ barcode.hashCode;
+    return name.hashCode ^ dueDate.hashCode ^ value.hashCode ^ isPaid.hashCode ^ barcode.hashCode;
   }
 }
