@@ -33,7 +33,8 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
     if (widget.barcode != null) {
       codigoInputTextController.text = widget.barcode!;
       int len = widget.barcode!.length;
-      if(len <= 44 && len >= 30){
+      /* INICIO - inserir dados a partir da leitura do barcode */
+      if(len <= 44){
         var baseDataBC = new DateTime(1997, 10, 8); // data base do banco central
         var finaldate = widget.barcode!.substring(5, 9); // quantidade de dias passados desde a data-base
         var dataVencimento = baseDataBC.add(new Duration(days: int.parse(finaldate)));
@@ -42,6 +43,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
         var valor = widget.barcode!.substring(10, 19);
         moneyInputTextController.text = int.parse(valor).toString();
       }
+      /* FIM - inserir dados a partir da leitura do barcode */
       
     }
 
